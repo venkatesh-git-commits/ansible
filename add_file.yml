@@ -1,0 +1,10 @@
+- hosts: DEV
+  connection: ssh
+  tasks: 
+    - name: creating a file (method-1)
+      file: path=/root/venkat.txt state=touch
+
+    - name: creating a file (method-2)
+      file:
+        path: /root/buddhu.txt
+        state: touch

@@ -7,8 +7,8 @@
     xyz: "maven"
   tasks:
     - name: I'm installing scm/vcs on this server
-      yum: name={{abc}}  state=present
+      action: yum name={{abc}}  state=absent
 
     - name: Im installing build tool on this server
-      yum: name={{xyz}} state=present
+      action: yum name={{xyz}} state=absent
 ...
