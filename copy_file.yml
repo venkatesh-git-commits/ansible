@@ -1,0 +1,7 @@
+- hosts: DEV
+  connection: ssh
+  tasks: 
+    - name: copy a file
+      copy:
+        src: /root/add_user.yml
+        dest: /opt/
