@@ -1,0 +1,14 @@
+---
+- hosts: DEV
+  connection: ssh
+
+  vars:
+    abc: "git"
+    xyz: "maven"
+  tasks:
+    - name: I'm installing scm/vcs on this server
+      yum: name={{abc}}  state=present
+
+    - name: Im installing build tool on this server
+      yum: name={{xyz}} state=present
+...
