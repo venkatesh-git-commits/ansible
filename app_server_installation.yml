@@ -1,0 +1,10 @@
+- hosts: dev
+  connection: ssh
+  tasks: 
+    - name: copy installation steps file
+      copy:
+        src: ./tomcat.sh
+        dest: /root/
+        mode: 777
+    - name: execute installation file
+      shell: /root/tomcat.sh
