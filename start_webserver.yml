@@ -1,0 +1,11 @@
+- hosts: DEV
+  connection: ssh
+  tasks:
+    - name: Installing webserver
+      yum: 
+        name: httpd
+        state: present
+    - name: Starting webserver
+      service:
+        name: httpd
+        state: started
