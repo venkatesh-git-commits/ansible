@@ -1,0 +1,9 @@
+- hosts: DEV
+  connection: ssh
+  tasks:
+    - name: creating a user (method-1)
+      user: name=dhoni state=present
+    - name: creating a user (method-2)
+      user: 
+        name: yuvi 
+        state: present
