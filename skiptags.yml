@@ -1,0 +1,11 @@
+- hosts: test
+  connection: ssh
+  tasks: 
+    - name: install git 
+      yum: name=git state=present
+      tags: scmtool
+    - name: install maven
+      yum: name=maven state=present
+      tags: buildtool
+    - name: install httpd
+      yum: name=httpd state=present
