@@ -1,0 +1,10 @@
+- hosts: DEV
+  connection: ssh
+  tasks: 
+    - name: creating a file (method-1)
+      file: path=/root/devops state=directory
+
+    - name: creating a file (method-2)
+      file:
+        path: /root/flm
+        state: directory
