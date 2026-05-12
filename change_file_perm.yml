@@ -1,0 +1,10 @@
+- hosts: DEV
+  connection: ssh
+  tasks: 
+    - name: creating a file/modifying a file and changing its permissions
+      file: 
+        path: /root/Venkat.txt
+        state: touch
+        owner: dhoni
+        group: sachin
+        mode: 777
