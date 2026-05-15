@@ -1,0 +1,5 @@
+- hosts: dev
+  connection: ssh
+  tasks:
+    - name: downloading git repo
+      git: repo=https://github.com/venkatesh-git-commits/ansible.git dest=/opt/ansible_code
