@@ -1,0 +1,10 @@
+- hosts: dev
+  connection: ssh
+  tasks:
+    - name: install git
+      yum: name=git state=present
+    - name: get the git version
+      command:  git -v
+      register: abc
+    - debug: 
+        msg: "This git version is {{abc}}"
