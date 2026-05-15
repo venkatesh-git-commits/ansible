@@ -1,0 +1,6 @@
+- hosts: test[0]
+  connection: ssh
+  roles: 
+    - venkatesh
+    - mustafa
+    - krishna

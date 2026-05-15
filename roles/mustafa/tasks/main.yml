@@ -1,0 +1,5 @@
+- name: create a file in default path
+  file:
+    path: /var/www/html/index.html
+    state: touch
+
